@@ -92,10 +92,20 @@ function buildCharts(sample) {
       yaxis : {title: "Amount Found"}
     };
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar-plot")
+    Plotly.newPlot("bar-plot");
+
+
    // 1. Create the trace for the bubble chart.
-    var bubbleData = [
-   
+   var traceBubble = {
+    x: otuIds,
+    y: sampleValues,
+    text: otuLabels,
+    mode: 'markers',
+    
+   } 
+   var bubbleData = [
+
+
     ];
 
     // 2. Create the layout for the bubble chart.
